@@ -8,7 +8,7 @@ import Courses from "./screens/Courses";
 import Settings from "./screens/Settings";
 import Students from "./screens/Students";
 // import ViewCertificate from "./screens/ViewCertificate";
-// import NewCourse from "./screens/NewCourse";
+import NewCourse from "./screens/NewCourse";
 import TopSubMenu from "./components/TopSubMenu";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -42,8 +42,8 @@ const LoggedInContainer = () => (
         <Route path="/courses" component={Courses} />
         <Route path="/students" component={Students} />
         <Route path="/settings" component={Settings} />
-
-        {/* <Route path="/newCourse" component={NewCourse} />
+        <Route path="/newCourse" component={NewCourse} />
+        {/* 
         <Route path="/coursesDetail/:courseId" component={CourseDetail} />
         <Route path="/certificate/:certificateId" component={ViewCertificate} /> */}
       </div>
