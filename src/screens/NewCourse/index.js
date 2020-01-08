@@ -11,7 +11,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import uuid from "uuid/v4";
-import { Link } from "react-router-dom";
+
+import "./NewCourse.css";
 
 export default class NewCourse extends Component {
   constructor(props) {
@@ -66,7 +67,7 @@ export default class NewCourse extends Component {
   renderLinks() {
     return this.state.links.map(link => {
       return (
-        <Row>
+        <Row className="align-items-center">
           <Col md={{ span: 2 }}>
             <Form.Group>
               <Form.Label>Type</Form.Label>
@@ -106,7 +107,7 @@ export default class NewCourse extends Component {
           <Col md={{ span: 1 }}>
             <Button
               variant="danger"
-              className="mt-5 align-items-center"
+              className="mt-3 align-items-center"
               data-delete-id={link.id}
               onClick={this.removeLink}
             >
