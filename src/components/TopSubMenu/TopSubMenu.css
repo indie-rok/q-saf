@@ -6,6 +6,10 @@
   height: 60px;
 }
 
+.top-submenu--search-icon {
+  color: #c5c7cd;
+}
+
 .top-submenu--profile-image {
   width: 40px;
   height: 40px;

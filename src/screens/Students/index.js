@@ -15,7 +15,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-// import CustomToggle from "../../components/CustomToggleMenu";
+import CustomToggle from "../../components/CustomToggleMenu";
 import studentsData from "../../data/studentScreen";
 import "./Students.css";
 
@@ -147,11 +147,11 @@ export default class Students extends Component {
           show={this.state.isTrainingRecordModalOpen}
           onHide={() => this.setState({ isTrainingRecordModalOpen: false })}
         />
-        <h1>Students</h1>
-        <table className="students-table">
+        <h5 className="font-weight-bold">Students</h5>
+        <table className="students-table table-hover">
           <thead>
             <tr className="students-table--header">
-              <th>Student name</th>
+              <th width="25%">Student name</th>
               <th>Email</th>
               <th>ID</th>
               <th></th>
@@ -167,6 +167,7 @@ export default class Students extends Component {
                 Emmanuel Orozco
               </td>
               <td>indi3.rok@gmai.com</td>
+              <td>123</td>
               <td>
                 <FontAwesomeIcon
                   icon={faChevronDown}
@@ -174,17 +175,18 @@ export default class Students extends Component {
                 />
               </td>
             </tr>
+
             <tr>
               <td colSpan="4">
                 <table className="courses-table">
                   <thead>
                     <tr className="students-table--header">
-                      <th>Course Name</th>
-                      <th>Course status</th>
-                      <th>Certificate expires in</th>
-                      <th>Date completed</th>
-                      <th>Duration</th>
-                      <th></th>
+                      <th width="17%">Course Name</th>
+                      <th width="17%">Course status</th>
+                      <th width="17%">Certificate expires in</th>
+                      <th width="17%">Date completed</th>
+                      <th width="17%">Duration</th>
+                      <th width="17%"></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -198,7 +200,7 @@ export default class Students extends Component {
                       <td>12-12-12</td>
                       <td>3 days</td>
                       <td>
-                        {/* <Dropdown>
+                        <Dropdown>
                           <Dropdown.Toggle
                             as={CustomToggle}
                             id="dropdown-custom-components"
@@ -220,7 +222,7 @@ export default class Students extends Component {
                               Certificate
                             </Dropdown.Item>
                           </Dropdown.Menu>
-                        </Dropdown> */}
+                        </Dropdown>
                       </td>
                     </tr>
 
@@ -234,7 +236,7 @@ export default class Students extends Component {
                       <td>12-12-12</td>
                       <td>3 days</td>
                       <td>
-                        {/* <Dropdown>
+                        <Dropdown>
                           <Dropdown.Toggle
                             as={CustomToggle}
                             id="dropdown-custom-components"
@@ -256,7 +258,7 @@ export default class Students extends Component {
                               Certificate
                             </Dropdown.Item>
                           </Dropdown.Menu>
-                        </Dropdown> */}
+                        </Dropdown>
                       </td>
                     </tr>
                   </tbody>
@@ -274,7 +276,12 @@ export default class Students extends Component {
               </td>
               <td>indi3.rok@gmai.com</td>
               <td>123</td>
-              <td></td>
+              <td>
+                <FontAwesomeIcon
+                  icon={faChevronDown}
+                  className="font-weight-light"
+                />
+              </td>
             </tr>
           </tbody>
         </table>

@@ -1,3 +1,17 @@
+.courses-table thead {
+  color: #9fa2b4;
+}
+
+.courses-table.table-hover thead tr:hover td,
+.courses-table.table-hover thead tr:hover th {
+  background: white;
+}
+
+.courses-table.table-hover tbody tr:hover td,
+.courses-table.table-hover tbody tr:hover th {
+  background-color: rgb(245, 246, 252);
+}
+
 .courses--item td {
   height: 70px;
   vertical-align: middle;

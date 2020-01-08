@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCubes as logo } from "@fortawesome/free-solid-svg-icons";
 
@@ -12,7 +12,7 @@ export default class NavBar extends Component {
   render() {
     return (
       <nav className="menu">
-        <Link to="/courses">
+        <Link to="/login">
           <li className="menu--item">
             <h6 className="d-flex align-items-center">
               <FontAwesomeIcon icon={logo} size="2x" className="mt-4" />
@@ -21,24 +21,26 @@ export default class NavBar extends Component {
           </li>
         </Link>
 
-        <Link to="/courses">
-          <li className="menu--item">
-            <img src={BookIcon} alt="Book Icon" />
-            Courses
-          </li>
-        </Link>
-        <Link to="/students">
+        <NavLink to="/students" activeClassName="menu--item__active">
           <li className="menu--item">
             <img src={StudentIcon} alt="Student Icon" />
             Students
           </li>
-        </Link>
-        <Link to="/settings">
+        </NavLink>
+
+        <NavLink to="/courses" activeClassName="menu--item__active">
+          <li className="menu--item">
+            <img src={BookIcon} alt="Book Icon" />
+            Courses
+          </li>
+        </NavLink>
+
+        <NavLink to="/settings">
           <li className="menu--item">
             <img src={GearIcon} alt="Gear Icon" />
             Settings
           </li>
-        </Link>
+        </NavLink>
       </nav>
     );
   }

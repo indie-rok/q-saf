@@ -206,7 +206,6 @@ export default class NewCourse extends Component {
 
           <hr />
           {this.renderLinks()}
-          <hr />
 
           <Row>
             <Col>

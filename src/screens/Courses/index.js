@@ -4,24 +4,19 @@ import { Link } from "react-router-dom";
 import {
   Table,
   Button,
-  DropdownButton,
   Dropdown,
   Modal,
   Row,
   Col,
   Container,
   InputGroup,
-  FormControl,
-  Badge
+  FormControl
 } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-// import CustomToggle from "../../components/CustomToggleMenu";
-
-import SortIcon from "../../assets/sort-icon.png";
+import CustomToggle from "../../components/CustomToggleMenu";
 import FilterIcon from "../../assets/filter-icon.png";
-import SearchIcon from "../../assets/search-icon.png";
 
 import "./Courses.css";
 
@@ -140,7 +135,6 @@ export default class Courses extends Component {
             {item.course_name}
           </Link>
         </td>
-        <td class="text-capitalize">{item.course_status}</td>
         <td>{item.certificate_expiration_months} months</td>
         <td>
           <span
@@ -157,7 +151,7 @@ export default class Courses extends Component {
           <Link to="/certificate/32">View</Link>
         </td>
         <td>
-          {/* <Dropdown>
+          <Dropdown>
             <Dropdown.Toggle
               as={CustomToggle}
               id="dropdown-custom-components"
@@ -173,7 +167,7 @@ export default class Courses extends Component {
                 Assign Course
               </Dropdown.Item>
             </Dropdown.Menu>
-          </Dropdown> */}
+          </Dropdown>
         </td>
       </tr>
     ));
@@ -181,16 +175,13 @@ export default class Courses extends Component {
 
   render() {
     return (
-      <div className="d-flex flex-column" style={{ height: "100%" }}>
+      <div className="d-flex flex-column">
         <section className="courses-menu mb-5">
-          <h1>All Courses</h1>
+          <h5 className="font-weight-bold">All Courses</h5>
           <div>
             <Link to="/newCourse">
               <Button className="courses-menu--button">Create Course</Button>
             </Link>
-            <span className="courses-menu--item">
-              <img src={SortIcon} alt="Sort Icon" /> Sort
-            </span>
             <span className="courses-menu--item">
               <img src={FilterIcon} alt="Filter Icon" /> Filter
             </span>
@@ -202,14 +193,13 @@ export default class Courses extends Component {
           onHide={() => this.setState({ studenModalOpen: false })}
         />
 
-        <Table hover className="font-weight-regular">
+        <Table hover className="font-weight-regular courses-table">
           <thead>
             <tr>
-              <th>Course Name</th>
-              <th>Course status</th>
-              <th>Certificate expires in</th>
-              <th>Duration</th>
-              <th>Certificate</th>
+              <th width="40%">Course Name</th>
+              <th width="30%">Certificate expires in</th>
+              <th width="10%">Duration</th>
+              <th width="10%"></th>
               <th></th>
             </tr>
           </thead>
