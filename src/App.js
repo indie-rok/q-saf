@@ -9,7 +9,7 @@ import Courses from "./screens/Courses";
 // import Students from "./screens/Students";
 // import ViewCertificate from "./screens/ViewCertificate";
 // import NewCourse from "./screens/NewCourse";
-// import TopSubMenu from "./components/TopSubMenu";
+import TopSubMenu from "./components/TopSubMenu";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -37,7 +37,7 @@ const LoggedInContainer = () => (
   <>
     <NavBar />
     <div className="page-container">
-      {/* <TopSubMenu /> */}
+      <TopSubMenu />
       <div className="white-frame">
         <Route path="/courses" component={Courses} />
         {/* <Route path="/newCourse" component={NewCourse} />
