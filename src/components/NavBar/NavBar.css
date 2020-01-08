@@ -1,0 +1,30 @@
+.menu {
+  background: #252733;
+  display: flex;
+  max-width: 12%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.menu a:hover {
+  text-decoration: none;
+}
+
+.menu--item {
+  color: #dde2ff;
+  list-style-type: none;
+  padding: 1.2em 2em;
+  cursor: pointer;
+}
+
+.menu--item:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+
+.menu--item img {
+  margin: 0 0.5em;
+}
+
+.menu--item__active {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}

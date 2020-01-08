@@ -1,5 +1,45 @@
-import React from "react";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCubes as logo } from "@fortawesome/free-solid-svg-icons";
 
-export default function NavBar() {
-  return <div>NavBar</div>;
+import "./NavBar.css";
+import StudentIcon from "../../assets/student-icon.png";
+import BookIcon from "../../assets/book-icon.png";
+import GearIcon from "../../assets/gear-icon.png";
+
+export default class NavBar extends Component {
+  render() {
+    return (
+      <nav className="menu">
+        <Link to="/courses">
+          <li className="menu--item">
+            <h6 className="d-flex align-items-center">
+              <FontAwesomeIcon icon={logo} size="2x" className="mt-4" />
+              <span className="mt-4 ml-3">Logo</span>
+            </h6>
+          </li>
+        </Link>
+
+        <Link to="/courses">
+          <li className="menu--item">
+            <img src={BookIcon} alt="Book Icon" />
+            Courses
+          </li>
+        </Link>
+        <Link to="/students">
+          <li className="menu--item">
+            <img src={StudentIcon} alt="Student Icon" />
+            Students
+          </li>
+        </Link>
+        <Link to="/settings">
+          <li className="menu--item">
+            <img src={GearIcon} alt="Gear Icon" />
+            Settings
+          </li>
+        </Link>
+      </nav>
+    );
+  }
 }
