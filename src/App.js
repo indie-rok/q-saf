@@ -7,7 +7,7 @@ import Courses from "./screens/Courses";
 import CourseDetail from "./screens/CourseDetail";
 import Settings from "./screens/Settings";
 import Students from "./screens/Students";
-// import ViewCertificate from "./screens/ViewCertificate";
+import ViewCertificate from "./screens/ViewCertificate";
 import NewCourse from "./screens/NewCourse";
 import TopSubMenu from "./components/TopSubMenu";
 
@@ -44,7 +44,7 @@ const LoggedInContainer = () => (
         <Route path="/settings" component={Settings} />
         <Route path="/newCourse" component={NewCourse} />
         <Route path="/coursesDetail/:courseId" component={CourseDetail} />
-        {/* <Route path="/certificate/:certificateId" component={ViewCertificate} /> */}
+        <Route path="/certificate/:certificateId" component={ViewCertificate} />
       </div>
     </div>
   </>
