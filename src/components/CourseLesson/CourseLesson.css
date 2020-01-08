@@ -1,0 +1,15 @@
+.course-unit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 10px;
+  width: 100%;
+}
+
+.course-title {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  margin: 0;
+}

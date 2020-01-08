@@ -1,0 +1,41 @@
+.course-detail {
+  margin: 0.5em;
+}
+
+.course-content {
+  display: flex;
+  margin: 0em;
+  min-height: 600px;
+}
+
+.course-video {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-right: 1px solid #dddada;
+  padding-right: 2em;
+}
+
+.course-video--description {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #dddada;
+}
+
+.course-feedback--badge {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding: 1em;
+}
+
+.course-sylabus {
+  width: 20%;
+  height: 600px;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-sylabus--finish-button {
+  margin-top: auto;
+  background: #3751ff;
+}

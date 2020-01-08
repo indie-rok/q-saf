@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./screens/Login";
 import NavBar from "./components/NavBar";
 import Courses from "./screens/Courses";
-// import CourseDetail from "./screens/CourseDetail";
+import CourseDetail from "./screens/CourseDetail";
 import Settings from "./screens/Settings";
 import Students from "./screens/Students";
 // import ViewCertificate from "./screens/ViewCertificate";
@@ -43,9 +43,8 @@ const LoggedInContainer = () => (
         <Route path="/students" component={Students} />
         <Route path="/settings" component={Settings} />
         <Route path="/newCourse" component={NewCourse} />
-        {/* 
         <Route path="/coursesDetail/:courseId" component={CourseDetail} />
-        <Route path="/certificate/:certificateId" component={ViewCertificate} /> */}
+        {/* <Route path="/certificate/:certificateId" component={ViewCertificate} /> */}
       </div>
     </div>
   </>
