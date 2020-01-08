@@ -181,7 +181,7 @@ export default class Courses extends Component {
 
   render() {
     return (
-      <Container className="d-flex flex-column" style={{ height: "100%" }}>
+      <div className="d-flex flex-column" style={{ height: "100%" }}>
         <section className="courses-menu mb-5">
           <h1>All Courses</h1>
           <div>
@@ -215,7 +215,7 @@ export default class Courses extends Component {
           </thead>
           <tbody>{this.generateRows()}</tbody>
         </Table>
-      </Container>
+      </div>
     );
   }
 }

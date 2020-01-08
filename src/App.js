@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar";
 import Courses from "./screens/Courses";
 // import CourseDetail from "./screens/CourseDetail";
 // import Settings from "./screens/Settings";
-// import Students from "./screens/Students";
+import Students from "./screens/Students";
 // import ViewCertificate from "./screens/ViewCertificate";
 // import NewCourse from "./screens/NewCourse";
 import TopSubMenu from "./components/TopSubMenu";
@@ -40,9 +40,9 @@ const LoggedInContainer = () => (
       <TopSubMenu />
       <div className="white-frame">
         <Route path="/courses" component={Courses} />
+        <Route path="/students" component={Students} />
         {/* <Route path="/newCourse" component={NewCourse} />
         <Route path="/coursesDetail/:courseId" component={CourseDetail} />
-        <Route path="/students" component={Students} />
         <Route path="/settings" component={Settings} />
         <Route path="/certificate/:certificateId" component={ViewCertificate} /> */}
       </div>

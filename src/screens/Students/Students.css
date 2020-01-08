@@ -1,0 +1,31 @@
+.students-table {
+  width: 100%;
+}
+
+.students-table--header th {
+  font-weight: 500;
+  color: #9fa2b4;
+}
+
+.students-table tr:hover {
+  background: #ecf0f1;
+  cursor: pointer;
+}
+
+.students-table tr {
+  border-bottom: 1px solid #dfe0eb;
+  height: 70px;
+}
+
+.courses-table {
+  width: 100%;
+}
+
+.courses-table tr {
+  border: 0;
+  height: 60px;
+}
+
+.courses-table tr:hover {
+  background: #bdc3c7;
+}
