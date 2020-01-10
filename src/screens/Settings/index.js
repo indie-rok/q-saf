@@ -10,21 +10,33 @@ export default function Settings() {
 
   return (
     <main className="settings-container">
-      <Tabs
-        id="controlled-tab-example"
-        activeKey={key}
-        onSelect={k => setKey(k)}
-      >
+      <Tabs id="settings-tabs" activeKey={key} onSelect={k => setKey(k)}>
         <Tab eventKey="personal-details" title="Personal details">
           <Container>
             <Row>
               <Col>
                 <Form>
-                  <img
-                    src={AvatarDummy}
-                    alt="avatar people"
-                    className="img-thumbnail mb-4"
-                  />
+                  <Row className="mt-3">
+                    <Col md={3}>
+                      <img
+                        src={AvatarDummy}
+                        alt="avatar people"
+                        className="img-thumbnail mb-4"
+                      />
+                    </Col>
+
+                    <Col md={2}>
+                      <Button variant="primary" type="submit" className="mt-4">
+                        Update
+                      </Button>
+                    </Col>
+
+                    <Col md={3}>
+                      <Button variant="default" type="submit" className="mt-4">
+                        Remove
+                      </Button>
+                    </Col>
+                  </Row>
 
                   <Form.Group controlId="formBasicName">
                     <Form.Label>Name</Form.Label>
@@ -50,7 +62,7 @@ export default function Settings() {
                   </Form.Group>
 
                   <Button variant="primary" type="submit">
-                    Save
+                    Save name changes
                   </Button>
                 </Form>
               </Col>
@@ -74,12 +86,52 @@ export default function Settings() {
                   <Form.Label>Confirm Password</Form.Label>
                   <Form.Control type="password" placeholder="Enter Password" />
                 </Form.Group>
+
+                <Button variant="primary" type="submit">
+                  Change password
+                </Button>
               </Col>
             </Row>
           </Container>
         </Tab>
         <Tab eventKey="payment-details" title="Payment details">
-          2
+          <Container>
+            <Row>
+              <Col md={6}>
+                <Form.Group controlId="formBasicPassword" className="mt-3">
+                  <Form.Label>Cardholder name</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter cardholder name"
+                  />
+                </Form.Group>
+                <Form.Group controlId="formBasicPassword">
+                  <Form.Label>Card number</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter cardholder number"
+                  />
+                </Form.Group>
+                <Row>
+                  <Col>
+                    <Form.Group controlId="formBasicPassword">
+                      <Form.Label>Date</Form.Label>
+                      <Form.Control type="password" placeholder="10/21" />
+                    </Form.Group>
+                  </Col>
+                  <Col>
+                    <Form.Group controlId="formBasicPassword">
+                      <Form.Label>CVV</Form.Label>
+                      <Form.Control type="password" placeholder="029" />
+                    </Form.Group>
+                  </Col>
+                </Row>
+                <Button variant="primary" type="submit">
+                  Save payment details
+                </Button>
+              </Col>
+            </Row>
+          </Container>
         </Tab>
       </Tabs>
     </main>
