@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import "./TopSubMenu.css";
+import ProfileImage from "../../assets/profile-image.jpeg";
 
 export default function TopSubMenu() {
   return (
@@ -16,7 +17,7 @@ export default function TopSubMenu() {
         John Ferdinand
       </p>
       <img
-        src={faker.image.imageUrl()}
+        src={ProfileImage}
         className="top-submenu--profile-image"
         alt="profile"
       />
