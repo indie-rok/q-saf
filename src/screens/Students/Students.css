@@ -1,3 +1,33 @@
+.expandable-table {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.expandable-table--row {
+  width: 100%;
+  margin: 1em 0;
+  padding: 10px;
+  min-height: 60px;
+}
+
+.expandable-table--row:hover {
+  background-color: rgb(245, 246, 252);
+}
+
+.expandable-table--row img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.expandable-table-cell {
+  display: inline-block;
+  text-align: justify;
+  width: 23%;
+  max-width: 23%;
+}
+
 .students-table--header th {
   font-weight: 500;
   color: #9fa2b4;

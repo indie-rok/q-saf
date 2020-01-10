@@ -12,6 +12,10 @@ body {
   font-family: "Muli", sans-serif;
 }
 
+.dark-gray {
+  color: #9fa2b4;
+}
+
 .app-container {
   display: flex;
 }

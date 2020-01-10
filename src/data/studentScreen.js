@@ -7,54 +7,39 @@ export default [
       {
         name: "IT Science",
         status: "completed",
-        expiration_date: "10/12/2012",
-        date_completed: "12/12/12"
+        expiration_time: "4 months",
+        date_completed: "12-12-12",
+        duration: "5 days"
       },
+
       {
-        name: "React Native",
-        status: "in_progress",
-        expiration_date: "10/12/2012",
-        date_completed: "12/12/12"
+        name: "Cook",
+        status: "In progress",
+        expiration_time: "3 months",
+        date_completed: "1-1-1",
+        duration: "7 days"
       }
     ]
   },
-
   {
     id: 2,
-    name: "John Doe",
-    email: "john_dow@gmail.com",
+    name: "John due",
+    email: "alo@gmail.com",
     courses: [
       {
-        name: "IT Science",
+        name: "IT Math",
         status: "completed",
-        expiration_date: "10/12/2012",
-        date_completed: "12/12/12"
+        expiration_time: "4 months",
+        date_completed: "12-12-12",
+        duration: "5 days"
       },
-      {
-        name: "React Native",
-        status: "in_progress",
-        expiration_date: "10/12/2012",
-        date_completed: "12/12/12"
-      }
-    ]
-  },
 
-  {
-    id: 3,
-    name: "Cami",
-    email: "john_dow@gmail.com",
-    courses: [
       {
-        name: "IT Science",
-        status: "completed",
-        expiration_date: "10/12/2012",
-        date_completed: "12/12/12"
-      },
-      {
-        name: "React Native",
-        status: "in_progress",
-        expiration_date: "10/12/2012",
-        date_completed: "12/12/12"
+        name: "Space station",
+        status: "In progress",
+        expiration_time: "3 months",
+        date_completed: "1-1-1",
+        duration: "7 days"
       }
     ]
   }
