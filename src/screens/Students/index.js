@@ -55,10 +55,12 @@ function AddTrainingRecordModal(props) {
                 <h6>Course</h6>
               </Col>
               <Col>
-                <Form.Control as="select">
+                <Form.Control placeholder="Course name" />
+
+                {/* <Form.Control as="select">
                   <option>Tech in home</option>
                   <option>Another course</option>
-                </Form.Control>
+                </Form.Control> */}
               </Col>
             </Row>
             <hr />
@@ -140,7 +142,7 @@ export default class Students extends Component {
 
   renderRows() {
     return this.state.studentsData.map(student => (
-      <Accordion className="expandable-table--row">
+      <Accordion className="expandable-table--row border-bottom">
         <div>
           <img src={DummyImage} className="mr-2" />
           <span className="expandable-table-cell">{faker.name.findName()}</span>
@@ -170,7 +172,7 @@ export default class Students extends Component {
               <tbody>
                 {student.courses.map(course => {
                   return (
-                    <tr style={{ borderTop: "1px solid #DFE0EB" }}>
+                    <tr className="course-row">
                       <td>
                         {course.name} <br />
                         <Badge variant="secondary">Online</Badge>
@@ -234,10 +236,12 @@ export default class Students extends Component {
         />
 
         <div className="expandable-table">
-          <div className="mb-3 font-weight-bold dark-gray">
+          <div className="mb-3 font-weight-bold dark-gray pb-3 border-bottom">
             <span className="expandable-table-cell ">Student name</span>
             <span className="expandable-table-cell ml-5">Email</span>
-            <span className="expandable-table-cell text-right">ID</span>
+            <span className="expandable-table-cell text-right">
+              Students ID
+            </span>
           </div>
 
           {this.renderRows()}

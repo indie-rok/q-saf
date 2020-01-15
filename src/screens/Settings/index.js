@@ -71,8 +71,8 @@ export default function Settings() {
                 <img
                   src={AvatarDummy}
                   alt="avatar people"
-                  className="img-thumbnail mb-4"
-                  style={{ visibility: "hidden" }}
+                  className="img-thumbnail"
+                  style={{ visibility: "hidden", marginBottom: 39 }}
                 />
                 <Form.Group controlId="formBasicPassword">
                   <Form.Label>Current Password</Form.Label>

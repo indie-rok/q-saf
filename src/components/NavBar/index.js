@@ -5,7 +5,7 @@ import { faCubes as logo } from "@fortawesome/free-solid-svg-icons";
 
 import "./NavBar.css";
 import StudentIcon from "../../assets/student-icon.png";
-import BookIcon from "../../assets/book-icon.png";
+import BookIcon from "../../assets/book-icon-inactive.png";
 import GearIcon from "../../assets/gear-icon.png";
 
 export default class NavBar extends Component {
@@ -35,7 +35,7 @@ export default class NavBar extends Component {
           </li>
         </NavLink>
 
-        <NavLink to="/settings">
+        <NavLink to="/settings" activeClassName="menu--item__active">
           <li className="menu--item">
             <img src={GearIcon} alt="Gear Icon" />
             Settings
