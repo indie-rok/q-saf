@@ -161,19 +161,21 @@ export default class Students extends Component {
             <table className="courses-table">
               <thead>
                 <tr className="students-table--header">
-                  <th width="17%">Course Name</th>
-                  <th width="17%">Course status</th>
-                  <th width="17%">Certificate expires in</th>
-                  <th width="17%">Date completed</th>
-                  <th width="17%">Duration</th>
-                  <th width="17%"></th>
+                  <th width="16%" className="pl-2">
+                    Course Name
+                  </th>
+                  <th width="16%">Course status</th>
+                  <th width="16%">Certificate expires in</th>
+                  <th width="16%">Date completed</th>
+                  <th width="16%">Duration</th>
+                  <th width="16%"></th>
                 </tr>
               </thead>
               <tbody>
                 {student.courses.map(course => {
                   return (
                     <tr className="course-row">
-                      <td>
+                      <td className="pl-3">
                         {course.name} <br />
                         <Badge variant="secondary">Online</Badge>
                       </td>
