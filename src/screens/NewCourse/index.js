@@ -69,7 +69,9 @@ export default class NewCourse extends Component {
       return (
         <Row className="align-items-center">
           <Col md={{ span: 2 }}>
-            <Form.Group className={link.type === "html" ? "mb-5" : ""}>
+            <Form.Group
+              style={{ marginBottom: link.type === "html" ? 64 : 18 }}
+            >
               <Form.Label>Type</Form.Label>
               <Form.Control as="select" value={link.type}>
                 <option value="youtube">Youtube</option>
