@@ -67,11 +67,9 @@ export default class NewCourse extends Component {
   renderLinks() {
     return this.state.links.map(link => {
       return (
-        <Row className="align-items-center">
+        <Row>
           <Col md={{ span: 2 }}>
-            <Form.Group
-              style={{ marginBottom: link.type === "html" ? 64 : 18 }}
-            >
+            <Form.Group>
               <Form.Label>Type</Form.Label>
               <Form.Control as="select" value={link.type}>
                 <option value="youtube">Youtube</option>
@@ -109,9 +107,10 @@ export default class NewCourse extends Component {
           <Col md={{ span: 1 }}>
             <Button
               variant="danger"
-              className="mt-3 align-items-center"
+              className="align-items-center"
               data-delete-id={link.id}
               onClick={this.removeLink}
+              style={{ marginTop: 30 }}
             >
               <FontAwesomeIcon icon={faTrash} />
             </Button>
