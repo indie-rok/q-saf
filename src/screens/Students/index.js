@@ -13,11 +13,14 @@ import {
 } from "react-bootstrap";
 import faker from "faker";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faFilter } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronDown,
+  faFilter,
+  faPlus,
+  faCircle
+} from "@fortawesome/free-solid-svg-icons";
 import { useAccordionToggle } from "react-bootstrap/AccordionToggle";
 import DummyImage from "../../assets/avatar-dummy.jpg";
-
-import { Link } from "react-router-dom";
 
 import CustomToggle from "../../components/CustomToggleMenu";
 import studentsData from "../../data/studentScreen";
@@ -168,7 +171,27 @@ export default class Students extends Component {
                   <th width="16%">Certificate expires in</th>
                   <th width="16%">Date completed</th>
                   <th width="16%">Duration</th>
-                  <th width="16%"></th>
+                  <th width="16%">
+                    <span
+                      className="fa-layers fa-fw"
+                      style={{ cursor: "pointer" }}
+                      onClick={() =>
+                        this.setState({
+                          isTrainingRecordModalOpen: true
+                        })
+                      }
+                    >
+                      <FontAwesomeIcon
+                        icon={faCircle}
+                        size="lg"
+                        style={{ color: "#E4E5FF" }}
+                      />
+                      <FontAwesomeIcon
+                        icon={faPlus}
+                        style={{ color: "#5624FF" }}
+                      />
+                    </span>
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -191,15 +214,8 @@ export default class Students extends Component {
                           />
 
                           <Dropdown.Menu>
-                            <Dropdown.Item
-                              eventKey="3"
-                              onClick={() =>
-                                this.setState({
-                                  isTrainingRecordModalOpen: true
-                                })
-                              }
-                            >
-                              Add Training Record
+                            <Dropdown.Item eventKey="3">
+                              Delete Record
                             </Dropdown.Item>
                             <Dropdown.Divider />
                             <Dropdown.Item eventKey="1">

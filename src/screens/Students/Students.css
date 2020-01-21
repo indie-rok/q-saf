@@ -64,3 +64,8 @@
   border: 0;
   height: 60px;
 }
+
+.plus-icon {
+  color: #e4e5ff;
+  cursor: pointer;
+}
