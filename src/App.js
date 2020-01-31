@@ -1,6 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
+import { Provider as ReduxProvider } from "react-redux";
+import { ConnectedRouter } from "connected-react-router";
 
+import { store, history } from "./redux/store";
 import Login from "./screens/Login";
 import NavBar from "./components/NavBar";
 import Courses from "./screens/Courses";
@@ -17,18 +20,21 @@ import "./App.css";
 class App extends React.Component {
   render() {
     return (
-      <Router>
-        <div className="app-container">
-          <Switch>
-            <Route path="/login">
-              <Login />
-            </Route>
-            <Route>
-              <LoggedInContainer />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
+
+      <ReduxProvider store={store}>
+        <ConnectedRouter history={history}>
+          <div className="app-container">
+            <Switch>
+              <Route path="/login">
+                <Login />
+              </Route>
+              <Route>
+                <LoggedInContainer />
+              </Route>
+            </Switch>
+          </div>
+        </ConnectedRouter>
+      </ReduxProvider>
     );
   }
 }
